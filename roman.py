@@ -6,6 +6,7 @@ import sys
 # takes an argument  ex: MDCIXI
 # otherwise uses a default roman numeral
 # can also take an int and convert it to a roman numeral 
+
 default_string = 'MDCXIII'
 arg = str(sys.argv[1]).upper() if len(sys.argv) == 2 else default_string 
 
@@ -16,7 +17,7 @@ def get_values(arg):
         values = [dic[x] for x in values]
 
         for n in range(len(values)-1):
-            if values[n] < values[ n+1]:
+            if values[n] < values[n+1]:
                 values[n] *= -1
     else:
         values = rm(int(arg))
